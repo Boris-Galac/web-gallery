@@ -41,6 +41,7 @@
   color: var(--white);
   padding: 8px;
   background-color: rgba(36, 81, 184, 0.832);
+  height: max-content;
 }
 .accordion-service-heading {
   font-size: clamp(32px, 7vw, 48px);
@@ -49,6 +50,7 @@
 .gallery-accordion {
   display: grid;
   gap: 16px;
+  height: max-content;
 }
 .accordion-service-question {
   font-weight: 500;
