@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   baguetteBox.run(".gallery");
 });
+document.querySelectorAll(".accordion-button").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    // Daj malo vremena da se accordion otvori (Bootstrap animacija)
+    setTimeout(() => {
+      const rect = btn.getBoundingClientRect();
+      const offsetTop = window.scrollY + rect.top - 115; // 80px od vrha viewporta
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }, 300); // delay da se accordion prvo otvori
+  });
+});
