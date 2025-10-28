@@ -149,7 +149,7 @@ img[alt="gallery-tab-icon"] {
   }
   .web-gallery-imgs-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   }
   .accordion-service-inner-container--fast-track {
     display: flex;
