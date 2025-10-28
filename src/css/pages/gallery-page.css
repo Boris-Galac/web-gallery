@@ -16,6 +16,10 @@
   background-attachment: fixed;
   z-index: -1;
 }
+.main-gallery .container {
+  width: min(100% - 32px, 1510px);
+  margin-inline: auto;
+}
 .web-gallery {
   padding-top: 64px;
   padding-bottom: 32px;
@@ -37,11 +41,19 @@
   font-weight: 800;
   text-align: center;
 }
+.accordion-content-header {
+  display: grid;
+  gap: 16px;
+}
 .gallery-accordion .accordion-body {
   color: var(--white);
-  padding: 8px;
+  padding: 16px;
   background-color: rgba(36, 81, 184, 0.832);
   height: max-content;
+  border-radius: 8px;
+}
+.gallery-accordion ol {
+  padding-inline: 16px;
 }
 .accordion-service-heading {
   font-size: clamp(32px, 7vw, 48px);
@@ -70,6 +82,10 @@
   display: list-item;
   list-style-type: decimal;
   margin-bottom: 8px;
+}
+h2.accordion-header {
+  border-radius: 11px;
+  overflow: hidden;
 }
 .web-gallery-imgs-container {
   display: grid;
@@ -103,12 +119,27 @@ img[alt="gallery-tab-icon"] {
   border-radius: 12px;
 }
 @media (min-width: 1200px) {
+  .accordion-button {
+    width: 100%;
+    cursor: pointer;
+  }
+  .gallery-accordion .accordion-body {
+    color: var(--white);
+    padding-block: 8px;
+    padding-inline: 32px;
+    background-color: rgba(36, 80, 184, 0.26);
+    height: max-content;
+    border-radius: 8px;
+  }
   .accordion-service-inner-container {
     display: flex;
     gap: 16px;
   }
   .accordion-service-inner-container > *:nth-child(1) {
     width: 50%;
+    height: fit-content;
+    margin-block: auto;
+    gap: 24px;
   }
   .accordion-service-inner-container > *:nth-child(2) {
     width: 50%;
@@ -118,7 +149,7 @@ img[alt="gallery-tab-icon"] {
   }
   .web-gallery-imgs-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
   }
   .accordion-service-inner-container--fast-track {
     display: flex;
@@ -127,9 +158,9 @@ img[alt="gallery-tab-icon"] {
   .fast-track-row {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     gap: 16px;
+    padding-left: 29px;
   }
   .accordion-body--fast-track .accordion-service-inner-container > * {
     width: 100% !important;
@@ -161,5 +192,11 @@ img[alt="gallery-tab-icon"] {
     margin-left: 200px;
     text-align: left;
     font-size: 32px;
+    margin-block: auto;
+  }
+  .web-gallery-imgs-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
