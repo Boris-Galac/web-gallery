@@ -168,6 +168,12 @@ img[alt="gallery-tab-icon"] {
   display: none;
 }
 @media (min-width: 1200px) {
+  .accordion-fast-track-header-box {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
+    margin-bottom: 24px;
+  }
   .accordion-contact-bar {
     display: flex;
     align-items: center;
@@ -257,7 +263,7 @@ img[alt="gallery-tab-icon"] {
     gap: 16px;
   }
   .accordion-technologies-inner-wrapper {
-    background: #0000002b;
+    background: hsla(0, 0%, 0%, 0.169);
     border-radius: 11px;
     display: flex;
     flex-direction: row;
