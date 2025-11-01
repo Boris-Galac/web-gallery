@@ -167,6 +167,48 @@ img[alt="gallery-tab-icon"] {
 .accordion-contact-bar {
   display: none;
 }
+.accordion-gallery-testimonial {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.accordion-gallery-testimonial::before {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/accordion-gallery-quote.png") center /
+    contain no-repeat;
+  width: 60px;
+  opacity: 0.5;
+  aspect-ratio: 1;
+  right: 18px;
+  bottom: 16px;
+}
+.accordion-gallery-testimonial__header {
+  background: linear-gradient(to bottom, white 75%, transparent);
+  padding: 12px;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 16px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.accordion-gallery-testimonial__body {
+  padding: 12px;
+}
+.accordion-gallery-testimonial__body p {
+  line-height: 160%;
+  margin-bottom: 8px;
+}
+.accordion-gallery-testimonial__person {
+  font-size: 20px;
+  font-weight: 600;
+  display: grid;
+  gap: 8px;
+}
 @media (min-width: 1200px) {
   .accordion-fast-track-header-box {
     display: flex;
@@ -194,47 +236,7 @@ img[alt="gallery-tab-icon"] {
     background: url("/src/assets/images/heading-cog-img.png") center / contain
       no-repeat;
   }
-  .accordion-gallery-testimonial {
-    position: relative;
-    background-color: hsla(0, 0%, 100%, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .accordion-gallery-testimonial::before {
-    content: "";
-    position: absolute;
-    background: url("/src/assets/images/accordion-gallery-quote.png") center /
-      contain no-repeat;
-    width: 60px;
-    opacity: 0.5;
-    aspect-ratio: 1;
-    right: 18px;
-    bottom: 16px;
-  }
-  .accordion-gallery-testimonial__header {
-    background: linear-gradient(to bottom, white 75%, transparent);
-    padding: 12px;
-    color: var(--dark);
-    font-weight: 700;
-    font-size: 18px;
-    padding-left: 16px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-  }
-  .accordion-gallery-testimonial__body {
-    padding: 12px;
-  }
-  .accordion-gallery-testimonial__body p {
-    line-height: 160%;
-    margin-bottom: 8px;
-  }
-  .accordion-gallery-testimonial__person {
-    font-size: 20px;
-    font-weight: 600;
-    display: grid;
-    gap: 8px;
-  }
+
   .accordion-contact-bar-row {
     display: flex;
     flex-direction: column;
