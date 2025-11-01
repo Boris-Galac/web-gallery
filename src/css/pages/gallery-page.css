@@ -39,11 +39,16 @@
 .gallery-accordion button {
   background-color: hsl(213, 100%, 84%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
+  width: 100%;
+}
+.accordion-button img {
+  width: 48px;
 }
 .gallery-accordion button span {
-  font-size: 24px;
+  font-size: 16px;
+  margin: auto;
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
@@ -343,5 +348,8 @@ img[alt="gallery-tab-icon"] {
     height: fit-content;
     margin-block: auto;
     gap: 24px;
+  }
+  .accordion-gallery-testimonial {
+    margin-bottom: 0;
   }
 }
