@@ -63,6 +63,7 @@
   background-color: rgba(36, 81, 184, 0.832);
   height: max-content;
   border-radius: 8px;
+  outline: 1px solid white;
 }
 .gallery-accordion ol {
   padding-inline: 16px;
