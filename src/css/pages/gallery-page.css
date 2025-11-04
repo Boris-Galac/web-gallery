@@ -68,6 +68,13 @@
 .gallery-accordion ol {
   padding-inline: 16px;
 }
+.gallery-accordion li {
+  font-weight: 100;
+  opacity: 0.8;
+}
+.gallery-accordion li::marker {
+  font-weight: 900;
+}
 .accordion-service-heading {
   font-size: clamp(32px, 7vw, 48px);
   margin-bottom: 32px;
@@ -79,7 +86,8 @@
 .accordion-service-heading > span {
   position: relative;
   text-transform: uppercase;
-  font-size: clamp(27px, 7vw, 48px);
+  font-size: clamp(27px, 7vw, 68px);
+  font-weight: 700;
 }
 .accordion-service-heading > span::before {
   content: "";
@@ -216,6 +224,11 @@ img[alt="gallery-tab-icon"] {
   gap: 8px;
 }
 @media (min-width: 1200px) {
+  .accordion-ol-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
   .accordion-fast-track-header-box {
     display: flex;
     flex-direction: row;
@@ -226,19 +239,21 @@ img[alt="gallery-tab-icon"] {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 8px;
+    padding-block: 12px;
+    padding-inline: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     width: max-content;
-    background-color: rgba(0, 0, 0, 0.132);
+    background-color: rgb(32 68 169 / 37%);
   }
   .accordion-service-heading > span::after {
     content: "";
     position: absolute;
-    width: 40px;
+    width: 48px;
     aspect-ratio: 1;
-    top: 12px;
     right: -50px;
+    transform: translateY(-50%);
+    top: 50%;
     background: url("/src/assets/images/heading-cog-img.png") center / contain
       no-repeat;
   }
@@ -260,8 +275,8 @@ img[alt="gallery-tab-icon"] {
   }
   .gallery-accordion .accordion-body {
     color: var(--white);
-    padding-block: 8px;
-    padding-inline: 32px;
+    padding-block: 16px;
+    padding-inline: 16px;
     background-color: rgba(36, 80, 184, 0.26);
     height: max-content;
     border-radius: 8px;
@@ -271,8 +286,8 @@ img[alt="gallery-tab-icon"] {
     gap: 16px;
   }
   .accordion-technologies-inner-wrapper {
-    background: hsla(0, 0%, 0%, 0.169);
-    border-radius: 11px;
+    background: hsla(0, 0%, 0%, 0.12);
+    border-radius: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -294,7 +309,7 @@ img[alt="gallery-tab-icon"] {
   }
   .web-gallery-imgs-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   }
   .accordion-service-inner-container--fast-track {
     display: flex;
